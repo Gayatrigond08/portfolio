@@ -22,7 +22,7 @@ document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
 // Typing Effect
 const textEl = document.querySelector(".typing");
-const roles = ["Full Stack Developer", "Cloud Enthusiast", "DevOps Learner", "UI/UX Aficionado"];
+const roles = ["Full Stack Developer", "Computer Science Engineer", "Cloud & DevOps Enthusiast", "Problem Solver"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -51,15 +51,59 @@ function type() {
     setTimeout(type, typingSpeed);
 }
 
-// Mouse Follower for BG Glow
+// Mouse Follower Enhancements
 document.addEventListener("mousemove", (e) => {
-    const glow = document.querySelector(".bg-glow");
     const x = e.clientX;
     const y = e.clientY;
-    glow.style.transform = `translate(${x/50}px, ${y/50}px)`;
+
+    const glow1 = document.querySelector(".bg-glow");
+    glow1.style.left = `${x}px`;
+    glow1.style.top = `${y}px`;
+    glow1.style.transform = "translate(-50%, -50%)";
 });
+
+// Scroll Progress & Header Shrink
+window.addEventListener("scroll", () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progress = document.getElementById("scroll-progress");
+    if (progress) progress.style.width = scrolled + "%";
+
+    const header = document.querySelector("header");
+    if (winScroll > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+// Card Tilt Effect
+const initCards = () => {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)`;
+        });
+    });
+};
 
 // Initialize
 window.addEventListener("DOMContentLoaded", () => {
     type();
+    initCards();
 });
