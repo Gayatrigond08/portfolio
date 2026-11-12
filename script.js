@@ -22,7 +22,7 @@ document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
 // Typing Effect
 const textEl = document.querySelector(".typing");
-const roles = ["Full Stack Developer", "Computer Science Engineer", "Cloud & DevOps Enthusiast", "Problem Solver"];
+const roles = ["Full Stack Developer", "B.Tech CSE Graduate"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

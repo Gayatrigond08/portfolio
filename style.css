@@ -406,6 +406,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    html {
+        overflow-x: clip;
+    }
+
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .hero-content {
         flex-direction: column-reverse;
         text-align: center;

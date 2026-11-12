@@ -31,23 +31,25 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="theme-toggle">🌙</button>
+            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
         </nav>
     </header>
 
-    <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text reveal">
-                <h1>Hi, I'm <span class="highlight">Gayatri</span> </h1>
+                <h1>Hi, I'm <span class="highlight">Gayatri</span></h1>
                 <div class="typing-container">
                     <h3 class="typing"></h3>
                 </div>
                 <p>
-                    Recent B.Tech Computer Science graduate skilled in Python, C, Flask, FastAPI, Firebase, and MySQL, with experience building scalable full-stack web applications and REST APIs. Passionate about AI integration, automation, cloud technologies, and developing user-centric solutions.
+                    B.Tech CSE graduate who builds full-stack web apps with React, Node.js/Express and Flask.
+                    Completed a full-stack development internship in Python covering REST APIs and workflow
+                    automation. Seeking an entry-level software development role.
                 </p>
                 <div class="hero-btns">
-                    <a href="Gayatri.pdf" download class="btn">Download Resume</a>
+                    <a href="Gayatri_Gond.pdf" target="_blank" rel="noopener noreferrer" download class="btn"
+                        aria-label="Download Gayatri Gond's resume">Download Resume</a>
                 </div>
             </div>
 
@@ -58,170 +60,157 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
         <h2 class="reveal">About Me</h2>
         <div class="card reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <i class="fas fa-user-graduate" style="font-size: 3rem; margin-bottom: 20px;"></i>
-            <p style="font-size: 1.2rem; line-height: 1.8;">
-                B.Tech student at <strong>Srinivas Institute of Technology, Mangaluru</strong> (CGPA: 9.38).<br>
-                Pre-University: <strong>Anand Ashram Composite PU College, Bhatkal</strong> (82.66%).<br>
-                SSLC: <strong>Anand Ashram Highschool, Bhatkal</strong> (95%).
-            </p>
+            <h3>B.Tech Computer Science Engineering</h3>
+            <p>Srinivas Institute of Technology, Mangaluru | 2022-2026 | CGPA: 9.38</p>
+            <p>University Topper for Academic Excellence, 7th Semester</p>
+            <p>Pre-University | 2020-2022 | 82.66%</p>
+            <p>SSLC | 2020 | 95%</p>
         </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
         <h2 class="reveal">Technical Skills</h2>
         <div class="card-grid">
             <div class="card reveal">
                 <i class="fas fa-code"></i>
-                <h3>Programming & Web</h3>
-                <p>Python, C, Java, HTML, CSS, Tailwind CSS, JavaScript</p>
+                <h3>Programming</h3>
+                <p>Python, JavaScript, Java, C</p>
             </div>
             <div class="card reveal">
-                <i class="fas fa-layer-group"></i>
-                <h3>Frameworks & Tools</h3>
-                <p>Flask, FastAPI, Firebase, Git, GitHub, Docker, Jenkins, Selenium</p>
+                <i class="fas fa-laptop-code"></i>
+                <h3>Frontend</h3>
+                <p>React, HTML, CSS, Chart.js, Responsive Design</p>
             </div>
             <div class="card reveal">
                 <i class="fas fa-database"></i>
-                <h3>Databases & Other</h3>
-                <p>MySQL, MongoDB, SQLite, Machine Learning, Agentic AI, n8n Automation, AWS, Vercel, Render</p>
+                <h3>Backend &amp; Databases</h3>
+                <p>Node.js, Express.js, Flask, REST APIs, JWT Authentication, MySQL, MongoDB</p>
+            </div>
+            <div class="card reveal">
+                <i class="fas fa-robot"></i>
+                <h3>AI &amp; Automation</h3>
+                <p>Groq and OpenAI API integration, TextBlob, n8n</p>
+            </div>
+            <div class="card reveal">
+                <i class="fas fa-screwdriver-wrench"></i>
+                <h3>Tools</h3>
+                <p>Git, GitHub, Render, Vercel</p>
             </div>
         </div>
     </section>
 
-    <!-- INTERNSHIPS -->
     <section id="internships">
-        <h2 class="reveal">Internships</h2>
+        <h2 class="reveal">Internship</h2>
         <div class="card-grid">
             <div class="card reveal" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto; text-align: left;">
                 <div style="text-align: center;">
                     <i class="fas fa-briefcase" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                    <h3 style="margin-bottom: 15px;">Analogica Software Development Solutions Pvt Ltd</h3>
+                    <h3>Full Stack Development Intern (Python)</h3>
+                    <p>Analogica Software Development Solutions Pvt Ltd</p>
                 </div>
                 <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6; font-size: 1rem;">
-                    <li>Developed full-stack applications using Python, focusing on scalability and performance</li>
-                    <li>Designed and implemented REST APIs for seamless system functionality</li>
-                    <li>Automated workflows using n8n, enhancing operational efficiency</li>
-                    <li>Strengthened backend integration and system design skills through practical implementation</li>
+                    <li>Built full-stack Python web apps, including the LMS.</li>
+                    <li>Developed REST APIs and n8n workflow automation.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
         <h2 class="reveal">Projects</h2>
         <div class="card-grid">
             <div class="card reveal">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>All-in-One LMS, Workshop & Intern Management Dashboard</h3>
-                <ul style="list-style-type: disc; padding-left: 20px; text-align: left; font-size: 0.95rem; line-height: 1.5; margin-top: 15px;">
-                    <li>Developed a full-stack web application using Flask and MySQL for managing students, courses, and internships</li>
-                    <li>Implemented role-based access control to enhance system security</li>
-                    <li>Designed real-time performance tracking dashboard</li>
-                    <li>Automated certificate generation, reducing manual effort</li>
-                </ul>
+                <i class="fas fa-envelope-open-text"></i>
+                <h3><a href="https://github.com/Gayatrigond08/postcardly" target="_blank"
+                        rel="noopener noreferrer" aria-label="View the Postcardly project on GitHub">Postcardly -
+                        Interactive Digital Postcard Platform</a></h3>
+                <p>React, Vite, Node.js, Express, MongoDB, JWT, html2canvas, jsPDF</p>
             </div>
-
             <div class="card reveal">
                 <i class="fas fa-brain"></i>
-                <h3>Feel Sync: Intelligence Emotional Insights</h3>
-                <ul style="list-style-type: disc; padding-left: 20px; text-align: left; font-size: 0.95rem; line-height: 1.5; margin-top: 15px;">
-                    <li>Built an AI-based mental wellness platform using Python, Flask, HTML, CSS, JavaScript, and MySQL</li>
-                    <li>Integrated NLP-based sentiment analysis and real-time mood tracking</li>
-                    <li>Developed a chatbot for personalized emotional insights and user engagement</li>
-                </ul>
+                <h3><a href="https://github.com/Gayatrigond08/Feel-Sync" target="_blank"
+                        rel="noopener noreferrer" aria-label="View the Feel Sync project on GitHub">Feel Sync -
+                        AI-Powered Mental Wellness Platform</a></h3>
+                <p>Extended from an open-source app.</p>
+                <p>Python, Flask, MySQL, JavaScript, Chart.js, Groq API, OpenAI API, TextBlob</p>
             </div>
-
             <div class="card reveal">
-                <i class="fas fa-envelope-open-text"></i>
-                <h3>Postcardly – Interactive Digital Postcard Platform</h3>
-                <ul style="list-style-type: disc; padding-left: 20px; text-align: left; font-size: 0.95rem; line-height: 1.5; margin-top: 15px;">
-                    <li>Developed an interactive platform for creating and sharing personalized digital postcards</li>
-                    <li>Implemented customizable templates, messages, decorations, and interactive postcard elements</li>
-                    <li>Enabled responsive design with saving and link-based sharing for a seamless user experience</li>
-                </ul>
+                <i class="fas fa-graduation-cap"></i>
+                <h3><a href="https://github.com/darshan-simpi/Analogica-SkillTrack---LMS" target="_blank"
+                        rel="noopener noreferrer" aria-label="View the LMS project on GitHub">All-in-One LMS, Workshop
+                        &amp; Intern Management System</a></h3>
+                <p>Team project.</p>
+                <p>Python, Flask, MySQL (XAMPP), JWT, JavaScript, ReportLab</p>
             </div>
         </div>
+        <!-- TODO: Add live-demo links when live-demo URLs are available. -->
     </section>
 
-    <!-- CERTIFICATIONS -->
     <section class="reveal">
         <h2>Certifications</h2>
         <div class="card-grid">
             <div class="card">
-                <p><i class="fas fa-certificate"></i> Data Analytics using Excel - Intel Ethnotech Academy</p>
+                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Data Analytics using Excel</p>
             </div>
             <div class="card">
-                <p><i class="fas fa-certificate"></i> Fundamentals of DevOps - Intel Ethnotech Academy</p>
+                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Fundamentals of DevOps</p>
             </div>
             <div class="card">
-                <p><i class="fas fa-certificate"></i> Programming in C - Intel Ethnotech Academy</p>
+                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Programming in C</p>
             </div>
             <div class="card">
-                <p><i class="fas fa-certificate"></i> Machine Learning - Intel Ethnotech Academy</p>
+                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Machine Learning</p>
             </div>
         </div>
     </section>
 
-    <!-- ACHIEVEMENTS -->
     <section class="reveal">
-        <h2>Achievements</h2>
+        <h2>Languages</h2>
         <div class="card reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p><i class="fas fa-trophy"></i> Awarded University Topper for Academic Excellence in the 7th Semester</p>
-            <p><i class="fas fa-users"></i> Organized and managed the event as a part of the college fest</p>
+            <p>English, Kannada, Hindi</p>
         </div>
     </section>
 
-    <!-- LANGUAGES & HOBBIES -->
-    <section class="reveal">
-        <h2>Languages & Hobbies</h2>
-        <div class="card-grid">
-            <div class="card reveal">
-                <i class="fas fa-language"></i>
-                <h3>Languages</h3>
-                <p>English, Kannada, Hindi</p>
-            </div>
-            <div class="card reveal">
-                <i class="fas fa-palette"></i>
-                <h3>Hobbies</h3>
-                <p>Mehendi art, Drawing, Listening to music</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
     <section id="contact" class="reveal">
         <h2>Get In Touch</h2>
         <div class="card-grid">
             <div class="card">
-                <p><a href="mailto:gayatrigond102@gmail.com" style="color: inherit; text-decoration: none;"><i class="fas fa-envelope"></i> gayatrigond102@gmail.com</a></p>
+                <p><a href="mailto:gayatrigond102@gmail.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Email Gayatri Gond at gayatrigond102@gmail.com"
+                        style="color: inherit; text-decoration: none;"><i class="fas fa-envelope"></i>
+                        gayatrigond102@gmail.com</a></p>
             </div>
             <div class="card">
-                <p><a href="tel:9108239556" style="color: inherit; text-decoration: none;"><i class="fas fa-phone"></i> +91 9108239556</a></p>
+                <p><a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank"
+                        rel="noopener noreferrer" aria-label="View Gayatri Gond's LinkedIn profile"
+                        style="color: inherit; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn
+                        Profile</a></p>
             </div>
             <div class="card">
-                <p><a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank" style="color: inherit; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
-            </div>
-            <div class="card">
-                <p><a href="https://github.com/Gayatrigond08" target="_blank" style="color: inherit; text-decoration: none;"><i class="fab fa-github"></i> GitHub Profile</a></p>
+                <p><a href="https://github.com/Gayatrigond08" target="_blank" rel="noopener noreferrer"
+                        aria-label="View Gayatri Gond's GitHub profile"
+                        style="color: inherit; text-decoration: none;"><i class="fab fa-github"></i> GitHub
+                        Profile</a></p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Gayatrigond08" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:gayatrigond102@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="tel:9108239556"><i class="fas fa-phone"></i></a>
+            <a href="https://gayatrigond08.github.io/portfolio" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Gayatri Gond's portfolio"><i class="fas fa-globe"></i></a>
+            <a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank" rel="noopener noreferrer"
+                aria-label="View Gayatri Gond's LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Gayatrigond08" target="_blank" rel="noopener noreferrer"
+                aria-label="View Gayatri Gond's GitHub profile"><i class="fab fa-github"></i></a>
+            <a href="mailto:gayatrigond102@gmail.com" target="_blank" rel="noopener noreferrer"
+                aria-label="Email Gayatri Gond at gayatrigond102@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
-        <p>© 2026 Gayatri Gond </p>
+        <p>© 2026 Gayatri Gond</p>
     </footer>
 
     <script src="script.js"></script>
