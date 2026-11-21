@@ -36,13 +36,22 @@ const mobileNav = document.getElementById('mobile-nav');
 function closeMenu() {
     menuBtn.classList.remove('open');
     menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open menu');
     mobileNav.setAttribute('aria-hidden', 'true');
 }
 
 menuBtn.addEventListener('click', () => {
     const isOpen = menuBtn.classList.toggle('open');
     menuBtn.setAttribute('aria-expanded', String(isOpen));
+    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     mobileNav.setAttribute('aria-hidden', String(!isOpen));
+});
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        menuBtn.focus();
+    }
 });
 
 // Close on link click
