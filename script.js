@@ -90,7 +90,7 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll('.animate-fade-up').forEach(el => revealObserver.observe(el));
 
 /* ── Active nav link on scroll ───────────────────────────── */
-const sections  = document.querySelectorAll('section[id]');
+const sections  = document.querySelectorAll('section[id], #education');
 const navLinks  = document.querySelectorAll('.nav-links a');
 
 const sectionObserver = new IntersectionObserver(
