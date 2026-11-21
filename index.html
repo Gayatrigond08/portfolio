@@ -1,216 +1,614 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
-    <title>Gayatri Gond | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayatri Gond — Software Developer</title>
+    <meta name="description"
+        content="Gayatri Gond — Aspiring Software Developer specialising in Python, Flask, React and full-stack web development.">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="scroll-progress"></div>
-    <div class="bg-glow"></div>
-    <div class="bg-glow-2"></div>
-    <div class="floating-blob" style="top: 20%; left: 10%;"></div>
-    <div class="floating-blob" style="top: 60%; right: 10%; animation-delay: -5s;"></div>
+    <!-- Scroll progress -->
+    <div id="scroll-progress" aria-hidden="true"></div>
 
-    <header>
-        <nav>
-            <h2 class="logo">Gayatri Gond</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
+    <!-- ===================== NAVIGATION ===================== -->
+    <header id="site-header">
+        <nav class="nav-inner">
+            <a href="#home" class="nav-logo" aria-label="Home">GG</a>
+
+            <ul class="nav-links" role="list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#internships">Internships</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Credentials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle colour theme" title="Toggle theme">
+                    <i class="fa-solid fa-sun" id="icon-sun" aria-hidden="true"></i>
+                    <i class="fa-solid fa-moon" id="icon-moon" aria-hidden="true"></i>
+                </button>
+                <button class="nav-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="mobile-nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </nav>
+
+        <!-- Mobile nav drawer -->
+        <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+            <ul role="list">
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#skills" class="mobile-link">Skills</a></li>
+                <li><a href="#experience" class="mobile-link">Experience</a></li>
+                <li><a href="#projects" class="mobile-link">Projects</a></li>
+                <li><a href="#certifications" class="mobile-link">Credentials</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text reveal">
-                <h1>Hi, I'm <span class="highlight">Gayatri</span></h1>
-                <div class="typing-container">
-                    <h3 class="typing"></h3>
+    <main>
+
+        <!-- ===================== HERO ===================== -->
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <div class="hero-text animate-fade-up">
+                    <p class="hero-eyebrow">Available for opportunities</p>
+                    <h1>Hi, I'm<br><em>Gayatri Gond.</em></h1>
+                    <p class="hero-headline">Aspiring Software Developer<br>Python &amp; Web Technologies</p>
+                    <p class="hero-desc">
+                        I build practical, user-focused web applications — from Flask-powered REST APIs and full-stack
+                        learning management systems to React frontends with real-time analytics. Recently completed a
+                        full-stack development internship and graduated with a 9.38 CGPA.
+                    </p>
+
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn profile" class="social-pill">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Gayatrigond08" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub profile" class="social-pill">
+                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                        </a>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                        <a href="Gayatri_Gond.pdf" download class="btn btn-outline" aria-label="Download resume">
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Download Resume
+                        </a>
+                    </div>
                 </div>
-                <p>
-                    B.Tech CSE graduate who builds full-stack web apps with React, Node.js/Express and Flask.
-                    Completed a full-stack development internship in Python covering REST APIs and workflow
-                    automation. Seeking an entry-level software development role.
+
+                <div class="hero-image animate-fade-up" style="animation-delay: 0.15s;">
+                    <div class="hero-img-wrap">
+                        <img src="profile.jpeg" alt="Gayatri Gond" width="420" height="420" loading="eager">
+                    </div>
+                    <div class="hero-img-badge">
+                        <span class="badge-dot" aria-hidden="true"></span>
+                        Open to roles
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-hint" aria-label="Scroll down">
+                <span class="scroll-line" aria-hidden="true"></span>
+            </a>
+        </section>
+
+        <!-- ===================== ABOUT ===================== -->
+        <section id="about">
+            <div class="section-inner">
+                <div class="section-label animate-fade-up">About</div>
+                <div class="about-grid">
+                    <div class="about-text animate-fade-up">
+                        <h2>Building things that<br><em>actually work.</em></h2>
+                        <p>
+                            I'm a B.Tech Computer Science graduate from Srinivas Institute of Technology, Mangaluru
+                            (2022–2026), where I maintained a <strong>CGPA of 9.38</strong>.
+                        </p>
+                        <p>
+                            During my internship at <strong>Analogica Software Development Solutions Pvt. Ltd.</strong>,
+                            I worked on full-stack Python applications, designed REST APIs with Flask, integrated
+                            databases, and automated workflows using n8n.
+                        </p>
+                        <p>
+                            Outside structured work, I'm drawn to web development, Python tooling, frontend
+                            craftsmanship and AI-powered applications — anything that sits at the intersection of clean
+                            code and meaningful user experience.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-num">9.38</span>
+                                <span class="stat-label">CGPA</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-num">3+</span>
+                                <span class="stat-label">Projects shipped</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-aside animate-fade-up" style="animation-delay:0.1s;">
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+                            <div>
+                                <p class="edu-degree">B.Tech — Computer Science Engineering</p>
+                                <p class="edu-school">Srinivas Institute of Technology, Mangaluru</p>
+                                <p class="edu-year">2022 – 2026 &nbsp;·&nbsp; CGPA 9.38</p>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa-solid fa-school" aria-hidden="true"></i></div>
+                            <div>
+                                <p class="edu-degree">Pre-University (12th)</p>
+                                <p class="edu-school">Karnataka Board</p>
+                                <p class="edu-year">2020 – 2022 &nbsp;·&nbsp; 82.66%</p>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa-solid fa-book-open" aria-hidden="true"></i></div>
+                            <div>
+                                <p class="edu-degree">SSLC (10th)</p>
+                                <p class="edu-school">Karnataka Board</p>
+                                <p class="edu-year">2020 &nbsp;·&nbsp; 95%</p>
+                            </div>
+                        </div>
+                        <div class="about-langs">
+                            <span class="lang-tag">English</span>
+                            <span class="lang-tag">Kannada</span>
+                            <span class="lang-tag">Hindi</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="section-alt">
+            <div class="section-inner">
+                <div class="section-label animate-fade-up">Skills</div>
+                <h2 class="section-title animate-fade-up">Technical Stack</h2>
+                <p class="section-subtitle animate-fade-up">Technologies I work with day-to-day.</p>
+
+                <div class="skills-grid animate-fade-up">
+
+                    <div class="skill-group">
+                        <p class="skill-group-label">Programming</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">C++</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-label">Frontend</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-label">Backend &amp; Frameworks</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-label">Databases</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-label">Tools &amp; DevOps</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">Selenium</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <p class="skill-group-label">Automation &amp; AI</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">n8n</span>
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">AI Integration</span>
+                            <span class="skill-tag">Workflow Automation</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EXPERIENCE ===================== -->
+        <section id="experience">
+            <div class="section-inner">
+                <div class="section-label animate-fade-up">Experience</div>
+                <h2 class="section-title animate-fade-up">Where I've Worked</h2>
+
+                <div class="timeline animate-fade-up">
+                    <div class="timeline-item">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Full Stack Development Intern</h3>
+                                    <p class="timeline-company">Analogica Software Development Solutions Pvt. Ltd.</p>
+                                </div>
+                                <span class="timeline-period">2025 – 2026</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Developed full-stack Python web applications from design to deployment, including
+                                    the company's internal Learning Management System.</li>
+                                <li>Built and consumed RESTful APIs using Flask, applying JWT-based authentication and
+                                    structured error handling.</li>
+                                <li>Integrated MySQL databases with application business logic using SQLAlchemy and raw
+                                    queries.</li>
+                                <li>Automated internal business workflows using <strong>n8n</strong>, reducing manual
+                                    operations and improving process reliability.</li>
+                                <li>Collaborated within a team environment, following version control practices on
+                                    GitHub throughout the internship.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span>Python</span><span>Flask</span><span>MySQL</span>
+                                <span>REST APIs</span><span>n8n</span><span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="section-alt">
+            <div class="section-inner">
+                <div class="section-label animate-fade-up">Projects</div>
+                <h2 class="section-title animate-fade-up">Featured Work</h2>
+                <p class="section-subtitle animate-fade-up">A selection of projects I've built or contributed to.</p>
+
+                <div class="projects-list">
+
+                    <!-- Project 1: LMS -->
+                    <article class="project-card animate-fade-up">
+                        <div class="project-visual project-visual--lms" aria-hidden="true">
+                            <div class="project-mockup">
+                                <div class="mockup-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-sidebar">
+                                        <div class="mockup-logo-block"></div>
+                                        <div class="mockup-nav-item active"></div>
+                                        <div class="mockup-nav-item"></div>
+                                        <div class="mockup-nav-item"></div>
+                                        <div class="mockup-nav-item"></div>
+                                    </div>
+                                    <div class="mockup-main">
+                                        <div class="mockup-header-row">
+                                            <div class="mockup-title-block"></div>
+                                            <div class="mockup-action-block"></div>
+                                        </div>
+                                        <div class="mockup-cards-row">
+                                            <div class="mockup-stat-card"></div>
+                                            <div class="mockup-stat-card"></div>
+                                            <div class="mockup-stat-card"></div>
+                                        </div>
+                                        <div class="mockup-table">
+                                            <div class="mockup-row"></div>
+                                            <div class="mockup-row"></div>
+                                            <div class="mockup-row"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-number" aria-hidden="true">01</div>
+                            <h3 class="project-title">Analogica SkillTrack <span>LMS</span></h3>
+                            <p class="project-desc">
+                                A production-grade Learning Management System built during my internship. Supports four
+                                distinct role-based portals — Admin, Trainer, Student and Intern — each with tailored
+                                dashboards, assignment management, certificate generation, and activity tracking.
+                            </p>
+                            <ul class="project-features">
+                                <li>Role-based portals for Admin, Trainer, Student &amp; Intern</li>
+                                <li>Assignment submission and grading workflow</li>
+                                <li>PDF certificate generation (ReportLab)</li>
+                                <li>Activity and progress tracking dashboard</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span>Python</span><span>Flask</span><span>MySQL</span>
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>ReportLab</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/darshan-simpi/Analogica-SkillTrack---LMS" target="_blank"
+                                    rel="noopener noreferrer" class="project-link" aria-label="View LMS on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: FeelSync -->
+                    <article class="project-card project-card--reverse animate-fade-up">
+                        <div class="project-visual project-visual--feelsync" aria-hidden="true">
+                            <div class="project-mockup">
+                                <div class="mockup-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-content mockup-content--dark">
+                                    <div class="mockup-main mockup-main--full">
+                                        <div class="mockup-hero-block">
+                                            <div class="mockup-emoji">🌿</div>
+                                            <div class="mockup-hero-text"></div>
+                                            <div class="mockup-hero-sub"></div>
+                                        </div>
+                                        <div class="mockup-mood-row">
+                                            <div class="mood-dot mood-dot--great"></div>
+                                            <div class="mood-dot mood-dot--good"></div>
+                                            <div class="mood-dot mood-dot--ok"></div>
+                                            <div class="mood-dot mood-dot--bad"></div>
+                                        </div>
+                                        <div class="mockup-chart">
+                                            <div class="chart-bar" style="height:60%"></div>
+                                            <div class="chart-bar" style="height:80%"></div>
+                                            <div class="chart-bar" style="height:50%"></div>
+                                            <div class="chart-bar" style="height:90%"></div>
+                                            <div class="chart-bar" style="height:70%"></div>
+                                            <div class="chart-bar" style="height:65%"></div>
+                                            <div class="chart-bar" style="height:85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-number" aria-hidden="true">02</div>
+                            <h3 class="project-title">FeelSync <span>AI Mental Wellness</span></h3>
+                            <p class="project-desc">
+                                An AI-powered mental wellness journal that combines mood tracking, NLP-based sentiment
+                                analysis and an AI chatbot to help users understand and improve their emotional
+                                wellbeing over time.
+                            </p>
+                            <ul class="project-features">
+                                <li>Daily mood tracking &amp; structured journaling</li>
+                                <li>NLP sentiment analysis (TextBlob)</li>
+                                <li>AI chatbot powered by Groq &amp; OpenAI APIs</li>
+                                <li>Mood analytics dashboard with Chart.js</li>
+                                <li>Interactive wellness activities</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span>Python</span><span>Flask</span><span>MySQL</span>
+                                <span>JavaScript</span><span>Chart.js</span><span>NLP</span><span>Groq API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Gayatrigond08/Feel-Sync" target="_blank"
+                                    rel="noopener noreferrer" class="project-link" aria-label="View FeelSync on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Postcardly -->
+                    <article class="project-card animate-fade-up">
+                        <div class="project-visual project-visual--postcardly" aria-hidden="true">
+                            <div class="project-mockup">
+                                <div class="mockup-bar">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-main mockup-main--full">
+                                        <div class="postcard-editor">
+                                            <div class="postcard-canvas">
+                                                <div class="postcard-bg"></div>
+                                                <div class="postcard-text-block">
+                                                    <div class="postcard-line"></div>
+                                                    <div class="postcard-line short"></div>
+                                                </div>
+                                                <div class="postcard-stamp"></div>
+                                            </div>
+                                            <div class="postcard-toolbar">
+                                                <div class="toolbar-btn"></div>
+                                                <div class="toolbar-btn"></div>
+                                                <div class="toolbar-btn active"></div>
+                                                <div class="toolbar-btn"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-number" aria-hidden="true">03</div>
+                            <h3 class="project-title">Postcardly <span>Digital Postcard Creator</span></h3>
+                            <p class="project-desc">
+                                A browser-based interactive postcard editor built with React and Vite. Users can design
+                                custom postcards from multiple templates, save drafts locally, and download their final
+                                creation as an image — all without needing an account.
+                            </p>
+                            <ul class="project-features">
+                                <li>Interactive drag-and-drop postcard editor</li>
+                                <li>Multiple curated postcard templates</li>
+                                <li>Draft persistence via localStorage</li>
+                                <li>Download postcards as PNG images (html2canvas)</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span>React</span><span>Vite</span><span>JavaScript</span>
+                                <span>CSS</span><span>html2canvas</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Gayatrigond08/postcardly" target="_blank"
+                                    rel="noopener noreferrer" class="project-link"
+                                    aria-label="View Postcardly on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CERTIFICATIONS ===================== -->
+        <section id="certifications">
+            <div class="section-inner">
+                <div class="section-label animate-fade-up">Credentials</div>
+                <h2 class="section-title animate-fade-up">Certifications &amp; Achievements</h2>
+
+                <div class="credentials-grid animate-fade-up">
+
+                    <!-- Achievement highlight -->
+                    <div class="achievement-card">
+                        <div class="achievement-icon"><i class="fa-solid fa-trophy" aria-hidden="true"></i></div>
+                        <div>
+                            <p class="achievement-title">University Topper — 7th Semester</p>
+                            <p class="achievement-org">Srinivas Institute of Technology &nbsp;·&nbsp; Academic
+                                Excellence Award</p>
+                        </div>
+                    </div>
+
+                    <!-- Certs -->
+                    <div class="certs-list">
+                        <div class="cert-item animate-fade-up">
+                            <div class="cert-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                            <div>
+                                <p class="cert-name">Data Analytics using Excel</p>
+                                <p class="cert-issuer">Intel Ethnotech Academy</p>
+                            </div>
+                        </div>
+                        <div class="cert-item animate-fade-up" style="animation-delay:0.05s;">
+                            <div class="cert-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                            <div>
+                                <p class="cert-name">Fundamentals of DevOps</p>
+                                <p class="cert-issuer">Intel Ethnotech Academy</p>
+                            </div>
+                        </div>
+                        <div class="cert-item animate-fade-up" style="animation-delay:0.1s;">
+                            <div class="cert-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                            <div>
+                                <p class="cert-name">Programming in C</p>
+                                <p class="cert-issuer">Intel Ethnotech Academy</p>
+                            </div>
+                        </div>
+                        <div class="cert-item animate-fade-up" style="animation-delay:0.15s;">
+                            <div class="cert-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                            <div>
+                                <p class="cert-name">Machine Learning</p>
+                                <p class="cert-issuer">Intel Ethnotech Academy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="section-alt">
+            <div class="section-inner section-inner--narrow">
+                <div class="section-label animate-fade-up">Contact</div>
+                <h2 class="contact-heading animate-fade-up">Let's Build Something<br><em>Meaningful.</em></h2>
+                <p class="contact-sub animate-fade-up">
+                    I'm open to full-time roles, internships and interesting collaborations. If you think we'd be a good
+                    fit, let's talk.
                 </p>
-                <div class="hero-btns">
-                    <a href="Gayatri_Gond.pdf" target="_blank" rel="noopener noreferrer" download class="btn"
-                        aria-label="Download Gayatri Gond's resume">Download Resume</a>
+
+                <div class="contact-methods animate-fade-up">
+                    <a href="mailto:gayatrigond102@gmail.com" class="contact-method" aria-label="Email Gayatri">
+                        <div class="cm-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                        <div>
+                            <p class="cm-label">Email</p>
+                            <p class="cm-value">gayatrigond102@gmail.com</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right cm-arrow" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank"
+                        rel="noopener noreferrer" class="contact-method" aria-label="LinkedIn profile">
+                        <div class="cm-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></div>
+                        <div>
+                            <p class="cm-label">LinkedIn</p>
+                            <p class="cm-value">gayatri-gond-165a7b264</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right cm-arrow" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/Gayatrigond08" target="_blank" rel="noopener noreferrer"
+                        class="contact-method" aria-label="GitHub profile">
+                        <div class="cm-icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+                        <div>
+                            <p class="cm-label">GitHub</p>
+                            <p class="cm-value">Gayatrigond08</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-right cm-arrow" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <div class="hero-image reveal">
-                <div class="image-glow"></div>
-                <img src="profile.jpeg" alt="Gayatri Gond">
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-logo">GG</span>
+            <p class="footer-copy">© 2026 Gayatri Gond. Designed &amp; built with care.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Gayatrigond08" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:gayatrigond102@gmail.com" aria-label="Email">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
-    </section>
-
-    <section id="about">
-        <h2 class="reveal">About Me</h2>
-        <div class="card reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <i class="fas fa-user-graduate" style="font-size: 3rem; margin-bottom: 20px;"></i>
-            <h3>B.Tech Computer Science Engineering</h3>
-            <p>Srinivas Institute of Technology, Mangaluru | 2022-2026 | CGPA: 9.38</p>
-            <p>University Topper for Academic Excellence, 7th Semester</p>
-            <p>Pre-University | 2020-2022 | 82.66%</p>
-            <p>SSLC | 2020 | 95%</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2 class="reveal">Technical Skills</h2>
-        <div class="card-grid">
-            <div class="card reveal">
-                <i class="fas fa-code"></i>
-                <h3>Programming</h3>
-                <p>Python, JavaScript, Java, C</p>
-            </div>
-            <div class="card reveal">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Frontend</h3>
-                <p>React, HTML, CSS, Chart.js, Responsive Design</p>
-            </div>
-            <div class="card reveal">
-                <i class="fas fa-database"></i>
-                <h3>Backend &amp; Databases</h3>
-                <p>Node.js, Express.js, Flask, REST APIs, JWT Authentication, MySQL, MongoDB</p>
-            </div>
-            <div class="card reveal">
-                <i class="fas fa-robot"></i>
-                <h3>AI &amp; Automation</h3>
-                <p>Groq and OpenAI API integration, TextBlob, n8n</p>
-            </div>
-            <div class="card reveal">
-                <i class="fas fa-screwdriver-wrench"></i>
-                <h3>Tools</h3>
-                <p>Git, GitHub, Render, Vercel</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="internships">
-        <h2 class="reveal">Internship</h2>
-        <div class="card-grid">
-            <div class="card reveal" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto; text-align: left;">
-                <div style="text-align: center;">
-                    <i class="fas fa-briefcase" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                    <h3>Full Stack Development Intern (Python)</h3>
-                    <p>Analogica Software Development Solutions Pvt Ltd</p>
-                </div>
-                <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6; font-size: 1rem;">
-                    <li>Built full-stack Python web apps, including the LMS.</li>
-                    <li>Developed REST APIs and n8n workflow automation.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 class="reveal">Projects</h2>
-        <div class="card-grid">
-            <div class="card reveal">
-                <i class="fas fa-envelope-open-text"></i>
-                <h3><a href="https://github.com/Gayatrigond08/postcardly" target="_blank"
-                        rel="noopener noreferrer" aria-label="View the Postcardly project on GitHub">Postcardly -
-                        Interactive Digital Postcard Platform</a></h3>
-                <p>React, Vite, Node.js, Express, MongoDB, JWT, html2canvas, jsPDF</p>
-            </div>
-            <div class="card reveal">
-                <i class="fas fa-brain"></i>
-                <h3><a href="https://github.com/Gayatrigond08/Feel-Sync" target="_blank"
-                        rel="noopener noreferrer" aria-label="View the Feel Sync project on GitHub">Feel Sync -
-                        AI-Powered Mental Wellness Platform</a></h3>
-                <p>Extended from an open-source app.</p>
-                <p>Python, Flask, MySQL, JavaScript, Chart.js, Groq API, OpenAI API, TextBlob</p>
-            </div>
-            <div class="card reveal">
-                <i class="fas fa-graduation-cap"></i>
-                <h3><a href="https://github.com/darshan-simpi/Analogica-SkillTrack---LMS" target="_blank"
-                        rel="noopener noreferrer" aria-label="View the LMS project on GitHub">All-in-One LMS, Workshop
-                        &amp; Intern Management System</a></h3>
-                <p>Team project.</p>
-                <p>Python, Flask, MySQL (XAMPP), JWT, JavaScript, ReportLab</p>
-            </div>
-        </div>
-        <!-- TODO: Add live-demo links when live-demo URLs are available. -->
-    </section>
-
-    <section class="reveal">
-        <h2>Certifications</h2>
-        <div class="card-grid">
-            <div class="card">
-                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Data Analytics using Excel</p>
-            </div>
-            <div class="card">
-                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Fundamentals of DevOps</p>
-            </div>
-            <div class="card">
-                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Programming in C</p>
-            </div>
-            <div class="card">
-                <p><i class="fas fa-certificate"></i> Intel Ethnotech Academy: Machine Learning</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="reveal">
-        <h2>Languages</h2>
-        <div class="card reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>English, Kannada, Hindi</p>
-        </div>
-    </section>
-
-    <section id="contact" class="reveal">
-        <h2>Get In Touch</h2>
-        <div class="card-grid">
-            <div class="card">
-                <p><a href="mailto:gayatrigond102@gmail.com" target="_blank" rel="noopener noreferrer"
-                        aria-label="Email Gayatri Gond at gayatrigond102@gmail.com"
-                        style="color: inherit; text-decoration: none;"><i class="fas fa-envelope"></i>
-                        gayatrigond102@gmail.com</a></p>
-            </div>
-            <div class="card">
-                <p><a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank"
-                        rel="noopener noreferrer" aria-label="View Gayatri Gond's LinkedIn profile"
-                        style="color: inherit; text-decoration: none;"><i class="fab fa-linkedin"></i> LinkedIn
-                        Profile</a></p>
-            </div>
-            <div class="card">
-                <p><a href="https://github.com/Gayatrigond08" target="_blank" rel="noopener noreferrer"
-                        aria-label="View Gayatri Gond's GitHub profile"
-                        style="color: inherit; text-decoration: none;"><i class="fab fa-github"></i> GitHub
-                        Profile</a></p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="social-links">
-            <a href="https://gayatrigond08.github.io/portfolio" target="_blank" rel="noopener noreferrer"
-                aria-label="Visit Gayatri Gond's portfolio"><i class="fas fa-globe"></i></a>
-            <a href="https://www.linkedin.com/in/gayatri-gond-165a7b264" target="_blank" rel="noopener noreferrer"
-                aria-label="View Gayatri Gond's LinkedIn profile"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Gayatrigond08" target="_blank" rel="noopener noreferrer"
-                aria-label="View Gayatri Gond's GitHub profile"><i class="fab fa-github"></i></a>
-            <a href="mailto:gayatrigond102@gmail.com" target="_blank" rel="noopener noreferrer"
-                aria-label="Email Gayatri Gond at gayatrigond102@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p>© 2026 Gayatri Gond</p>
     </footer>
 
     <script src="script.js"></script>
