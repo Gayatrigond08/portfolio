@@ -554,8 +554,8 @@ section {
     border-radius: var(--radius-md);
     /* Soft natural shadow — depth without a card border */
     box-shadow:
-        0 2px 8px rgba(28,25,23,0.06),
-        0 12px 40px rgba(28,25,23,0.10);
+        0 2px 8px rgba(28, 25, 23, 0.06),
+        0 12px 40px rgba(28, 25, 23, 0.10);
 }
 
 .hero-img-wrap img {
@@ -1622,7 +1622,11 @@ section {
         justify-content: flex-start;
         align-self: auto;
     }
-    .hero-img-wrap { width: 300px; height: 390px; }
+
+    .hero-img-wrap {
+        width: 300px;
+        height: 390px;
+    }
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -1677,7 +1681,10 @@ section {
         font-size: 2.5rem;
     }
 
-    .hero-img-wrap { width: 230px; height: 300px; }
+    .hero-img-wrap {
+        width: 230px;
+        height: 300px;
+    }
 
     .nav-inner {
         padding: 0 var(--space-md);
@@ -1740,16 +1747,77 @@ section {
         text-align: center;
         gap: var(--space-sm);
     }
+
+    /* ── Hero: centre everything on mobile ── */
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-eyebrow {
+        justify-content: center;
+    }
+
+    .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+        align-self: auto;
+    }
+
+    /* ── About stats: centre row ── */
+    .about-stats {
+        justify-content: center;
+    }
+
+    /* ── About text: centre headings ── */
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 2.1rem;
+        font-size: clamp(1.9rem, 7.5vw, 2.3rem);
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 1rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-headline {
+        font-size: 0.95rem;
+    }
+
+    .hero-desc,
+    .hero-social {
+        margin-bottom: var(--space-md);
     }
 
     .hero-cta {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .hero-cta .btn {
+        text-align: center;
+        justify-content: center;
     }
 
     .hero-social {
